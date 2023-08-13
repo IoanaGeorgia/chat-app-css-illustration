@@ -7,6 +7,8 @@
     --veryDarkSaturatedViolet: hsl(271, 36%, 24%);
     --darkGrayshViolet: hsl(270, 7%, 64%);
     --linearGradientBg: linear-gradient( to left,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+        --linearGradientBgButton: linear-gradient( to right,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+
     --white: hsl(0, 0%, 100%);
     --lightGrayishViolet: hsl(270, 20%, 96%);
     --submitButtonBg: hsl(271, 36%, 24%);
@@ -55,7 +57,7 @@ body{
     padding-right:10%;
 }
 .phoneWrapper{
-    width:20em;
+    width:18em;
     height:70vh;
     background-color: var(--grayishBlue);
     border-radius: 33px;
@@ -69,7 +71,7 @@ body{
  top:0px;
  left:0px;
  width:100%;
- height:5.5em;
+ height:4.5em;
  border-top-left-radius: 20px;
  border-top-right-radius: 20px;
  border-bottom-left-radius: 5px;
@@ -82,7 +84,7 @@ body{
     margin-left:20%;
     background-color: var(--white);
     width:60%;
-    height:1.5em;
+    height:1em;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -98,7 +100,7 @@ body{
 }
 .userProfile img{
     border-radius: 50%;
-    width:40px;
+    width:30px;
     border:2px solid var(--white);
     margin-right:10px;
 }
@@ -106,6 +108,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
 }
 .userProfileInnerWrapper{
     margin-bottom: 15px;
@@ -115,5 +118,113 @@ body{
 }
 .userProfileInnerWrapper p:last-of-type{
     color:rgba(255, 255, 255, 0.604);
-    font-size: 12px;
+    font-size: 8px;
+}
+.phoneMessage{
+    font-size: 8px;
+    margin-top:1em;
+    color:var(--desaturatedDarkViolet);
+    width:50%;
+    padding:6px;
+    background-color: var(--paleViolet);
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+    line-height: 150%;
+    margin-left:1em;
+}
+.firstPhone{
+    margin-top:10em;
+}
+.phoneImageWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:55%;
+    float:right;
+    margin:1em;
+    margin-bottom: 0em;
+    margin-right: 0.5em;
+}
+.phoneImageWrapper img{
+    height:3em;
+    border-radius: 14px;
+
+}
+.phoneUserMessages{
+    float:right;
+    width:50%;
+    margin-right: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.phoneMessageUser{
+        font-size: 8px;
+    color:black;
+    padding:6px;
+    margin-top:1em;
+    background-color: var(--white);
+    border-radius: 10px;
+    border-bottom-right-radius: 2px;
+    line-height: 150%;
+    width: fit-content;
+}
+.secondPhone{
+    margin-top:17em;
+}
+.phoneWalkInvite{
+    font-size: 8px;
+    color:white;
+    background-image: var(--linearGradientBgButton);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 12px;
+    margin-left: 1em;
+    margin-top:1em;
+    border-radius: 12px;
+    border-bottom-left-radius: 5px;
+    width:70%;
+    line-height:170%;
+}
+.phoneWalkInvite button{
+    border-radius: 50%;
+    border:1px solid var(--lightGrayishViolet);
+    width:1em;
+    height:1em;
+    background-color: transparent;
+}
+.phoneWalkInvite p{
+    text-align: left;
+    width:100%;
+    margin-left:5%;
+}
+.price{
+    font-size: 14px;
+    margin-right: 5%;
+    font-weight: var(--boldFontWEight);
+}
+.phoneInput{
+    background-color: var(--white);
+    margin:1em;
+    margin-top:1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0em 0em 0em 2em;
+    font-size: 9px;
+    border-radius: 20px;
+    color:var(--grayishBlue)
+}
+.phoneInput p{
+    margin:0px;
+    padding: 6px;
+}
+.phoneInput span{
+    border-radius: 50%;
+    color:white;
+    background-color: var(--desaturatedDarkViolet);
+    margin-right:0.2em;
+    height:100%;
 }
