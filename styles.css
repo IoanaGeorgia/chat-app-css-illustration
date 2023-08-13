@@ -1,9 +1,9 @@
 
 :root{
-    --paleViolet: hsl(276, 100%, 81%);
-    --moderateViolet: hsl(276, 55%, 52%);
-    --desaturatedDarkViolet: hsl(271, 15%, 43%);
-    --grayishBlue: hsl(206, 6%, 79%);
+    --paleViolet: hsl(277, 100%, 93%);
+    --moderateViolet: hsl(276, 30%, 69%);
+    --desaturatedDarkViolet: hsl(270, 7%, 48%);
+    --grayishBlue: hsla(206, 7%, 79%, 0.99);
     --veryDarkSaturatedViolet: hsl(271, 36%, 24%);
     --darkGrayshViolet: hsl(270, 7%, 64%);
     --linearGradientBg: linear-gradient( to left,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
@@ -59,7 +59,7 @@ body{
 .phoneWrapper{
     width:18em;
     height:70vh;
-    background-color: var(--grayishBlue);
+    background-color: var(--lightGrayishViolet);
     border-radius: 33px;
     position: relative;
     border:15px solid var(--white);
