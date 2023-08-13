@@ -8,6 +8,7 @@
     --darkGrayshViolet: hsl(270, 7%, 64%);
     --linearGradientBg: linear-gradient( to left,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
         --linearGradientBgButton: linear-gradient( to right,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    --linearGradientBgIllustration: linear-gradient( 220deg,  hsl(293, 100%, 63%), 15%, hsl(264, 100%, 61%));
 
     --white: hsl(0, 0%, 100%);
     --lightGrayishViolet: hsl(270, 20%, 96%);
@@ -27,9 +28,19 @@ body{
     font-size: var(--fontSize);
     line-height: 1.5em;
 }
+.illustrationMain{
+    background-image: var(--linearGradientBgIllustration);
+    width:32%;
+    left:-7%;
+    height:90%;
+    position: absolute;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 300px;
+
+}
 .mainWrapper{
     width:100%;
-    height:90vh;
+    height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +48,7 @@ body{
 .textWrapper{
     font-size:var(--fontSize);
     color:var(--darkGrayshViolet);
-    width:40%;
+    width:50%;
 }
 .textWrapperTitle{
     font-size:2.5em;
@@ -45,25 +56,27 @@ body{
     color:var(--veryDarkSaturatedViolet)
 }
 .textWrapper p:not(.textWrapperTitle){
-    width:70%;
+    width:60%;
+    line-height: 170%;
 }
 .contentWrapper{
     height: 100%;
-    width:60%;
+    width:50%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     box-sizing: border-box;
     padding-right:10%;
+    cursor:default;
 }
 .phoneWrapper{
-    width:18em;
+    width:17em;
     height:70vh;
     background-color: var(--lightGrayishViolet);
     border-radius: 33px;
     position: relative;
     border:15px solid var(--white);
-    box-shadow: 1px 0px 5px rgba(128, 128, 128, 0.422);
+    box-shadow: 0px 0px 25px rgba(128, 128, 128, 0.422);
 }
 .phoneUser{
    background-image:var(--linearGradientBg); 
@@ -77,6 +90,7 @@ body{
  border-bottom-left-radius: 5px;
  border-bottom-right-radius: 5px;
 }
+
 .phoneUser::after{
     content:"";
     position: absolute;
