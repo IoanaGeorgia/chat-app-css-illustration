@@ -1,244 +1,296 @@
+:root {
+  --paleViolet: hsl(277, 100%, 93%);
+  --moderateViolet: hsl(276, 30%, 69%);
+  --desaturatedDarkViolet: hsl(270, 7%, 48%);
+  --grayishBlue: hsla(206, 7%, 79%, 0.99);
+  --veryDarkSaturatedViolet: hsl(271, 36%, 24%);
+  --darkGrayshViolet: hsl(270, 7%, 64%);
+  --linearGradientBg: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  --linearGradientBgButton: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  --linearGradientBgIllustration: linear-gradient(
+    220deg,
+    hsl(293, 100%, 63%),
+    15%,
+    hsl(264, 100%, 61%)
+  );
 
-:root{
-    --paleViolet: hsl(277, 100%, 93%);
-    --moderateViolet: hsl(276, 30%, 69%);
-    --desaturatedDarkViolet: hsl(270, 7%, 48%);
-    --grayishBlue: hsla(206, 7%, 79%, 0.99);
-    --veryDarkSaturatedViolet: hsl(271, 36%, 24%);
-    --darkGrayshViolet: hsl(270, 7%, 64%);
-    --linearGradientBg: linear-gradient( to left,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-        --linearGradientBgButton: linear-gradient( to right,  hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-    --linearGradientBgIllustration: linear-gradient( 220deg,  hsl(293, 100%, 63%), 15%, hsl(264, 100%, 61%));
+  --white: hsl(0, 0%, 100%);
+  --lightGrayishViolet: hsl(270, 20%, 96%);
+  --submitButtonBg: hsl(271, 36%, 24%);
+  --radioButtonOutline: hsl(289, 100%, 72%);
+  --fontSize: 16px;
+  --fontFamily: "Rubik", sans-serif;
+  --normalFontWeight: 400;
+  --mediumFontWeight: 500;
+  --boldFontWEight: 700;
+}
+body {
+  background-color: var(--lightGrayishViolet);
+  font-family: var(--fontFamily);
+  padding: 0px;
+  margin: 0px;
+  font-size: var(--fontSize);
+  line-height: 1.5em;
+}
+.illustrationMain {
+  background-image: var(--linearGradientBgIllustration);
+  width: 32%;
+  left: -7%;
+  height: 90%;
+  position: absolute;
+  border-bottom-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+}
+.mainWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textWrapper {
+  font-size: var(--fontSize);
+  color: var(--darkGrayshViolet);
+  width: 50%;
+}
+.textWrapperTitle {
+  font-size: 2.5em;
+  font-weight: var(--boldFontWEight);
+  color: var(--veryDarkSaturatedViolet);
+}
+.textWrapper p:not(.textWrapperTitle) {
+  width: 60%;
+  line-height: 170%;
+}
+.contentWrapper {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 10%;
+  cursor: default;
+}
+.phoneWrapper {
+  width: 17em;
+  height: 70vh;
+  background-color: var(--lightGrayishViolet);
+  border-radius: 33px;
+  position: relative;
+  border: 15px solid var(--white);
+  box-shadow: 0px 0px 25px rgba(128, 128, 128, 0.422);
+}
+.phoneUser {
+  background-image: var(--linearGradientBg);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 4.5em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
-    --white: hsl(0, 0%, 100%);
-    --lightGrayishViolet: hsl(270, 20%, 96%);
-    --submitButtonBg: hsl(271, 36%, 24%);
-    --radioButtonOutline: hsl(289, 100%, 72%);
-    --fontSize:16px;
-    --fontFamily: 'Rubik', sans-serif;
-    --normalFontWeight:400;
-    --mediumFontWeight:500;
-    --boldFontWEight:700
+.phoneUser::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  margin-left: 20%;
+  background-color: var(--white);
+  width: 60%;
+  height: 1em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-body{
-    background-color: var(--lightGrayishViolet);
-    font-family: var(--fontFamily);
-    padding:0px;
-    margin:0px;
-    font-size: var(--fontSize);
-    line-height: 1.5em;
+.phoneUserInnerWrapper {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
 }
-.illustrationMain{
-    background-image: var(--linearGradientBgIllustration);
-    width:32%;
-    left:-7%;
-    height:90%;
-    position: absolute;
-    border-bottom-left-radius: 300px;
-    border-bottom-right-radius: 300px;
+.userProfile img {
+  border-radius: 50%;
+  width: 30px;
+  border: 2px solid var(--white);
+  margin-right: 10px;
+}
+.userProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.userProfileInnerWrapper {
+  margin-bottom: 15px;
+}
+.userProfileInnerWrapper p {
+  height: 5px;
+}
+.userProfileInnerWrapper p:last-of-type {
+  color: rgba(255, 255, 255, 0.604);
+  font-size: 8px;
+}
+.phoneMessage {
+  font-size: 8px;
+  margin-top: 1em;
+  color: var(--desaturatedDarkViolet);
+  width: 50%;
+  padding: 6px;
+  background-color: var(--paleViolet);
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  line-height: 150%;
+  margin-left: 1em;
+}
+.firstPhone {
+  margin-top: 10em;
+}
+.phoneImageWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+  float: right;
+  margin: 1em;
+  margin-bottom: 0em;
+  margin-right: 0.5em;
+}
+.phoneImageWrapper img {
+  height: 3em;
+  border-radius: 14px;
+}
+.phoneUserMessages {
+  float: right;
+  width: 50%;
+  margin-right: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.phoneMessageUser {
+  font-size: 8px;
+  color: black;
+  padding: 6px;
+  margin-top: 1em;
+  background-color: var(--white);
+  border-radius: 10px;
+  border-bottom-right-radius: 2px;
+  line-height: 150%;
+  width: fit-content;
+}
+.secondPhone {
+  margin-top: 17em;
+}
+.phoneWalkInvite {
+  font-size: 8px;
+  color: white;
+  background-image: var(--linearGradientBgButton);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  margin-left: 1em;
+  margin-top: 1em;
+  border-radius: 12px;
+  border-bottom-left-radius: 5px;
+  width: 70%;
+  line-height: 170%;
+}
+.phoneWalkInvite button {
+  border-radius: 50%;
+  border: 1px solid var(--lightGrayishViolet);
+  width: 1em;
+  height: 1em;
+  background-color: transparent;
+}
+.phoneWalkInvite p {
+  text-align: left;
+  width: 100%;
+  margin-left: 5%;
+}
+.price {
+  font-size: 14px;
+  margin-right: 5%;
+  font-weight: var(--boldFontWEight);
+}
+.phoneInput {
+  background-color: var(--white);
+  margin: 1em;
+  margin-top: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 0em 0em 2em;
+  font-size: 9px;
+  border-radius: 20px;
+  color: var(--grayishBlue);
+}
+.phoneInput p {
+  margin: 0px;
+  padding: 6px;
+}
+.phoneInput span {
+  border-radius: 50%;
+  color: white;
+  background-color: var(--desaturatedDarkViolet);
+  margin-right: 0.2em;
+  height: 100%;
+}
+.attribution {
+  text-align: center;
+}
 
-}
-.mainWrapper{
-    width:100%;
-    height:100vh;
+@media (max-width: 800px) {
+  .mainWrapper {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .mainWrapper > div {
+    width: 100%;
+  }
+  .contentWrapper {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.textWrapper{
-    font-size:var(--fontSize);
-    color:var(--darkGrayshViolet);
-    width:50%;
-}
-.textWrapperTitle{
-    font-size:2.5em;
-    font-weight: var(--boldFontWEight);
-    color:var(--veryDarkSaturatedViolet)
-}
-.textWrapper p:not(.textWrapperTitle){
-    width:60%;
-    line-height: 170%;
-}
-.contentWrapper{
-    height: 100%;
-    width:50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    box-sizing: border-box;
-    padding-right:10%;
-    cursor:default;
-}
-.phoneWrapper{
-    width:17em;
-    height:70vh;
-    background-color: var(--lightGrayishViolet);
-    border-radius: 33px;
-    position: relative;
-    border:15px solid var(--white);
-    box-shadow: 0px 0px 25px rgba(128, 128, 128, 0.422);
-}
-.phoneUser{
-   background-image:var(--linearGradientBg); 
- position: absolute;
- top:0px;
- left:0px;
- width:100%;
- height:4.5em;
- border-top-left-radius: 20px;
- border-top-right-radius: 20px;
- border-bottom-left-radius: 5px;
- border-bottom-right-radius: 5px;
-}
-
-.phoneUser::after{
-    content:"";
-    position: absolute;
-    top:0px;
-    margin-left:20%;
-    background-color: var(--white);
-    width:60%;
-    height:1em;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-.phoneUserInnerWrapper{
-    color:var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:0px 10px;
-    position: absolute;
-    bottom: 0px;
-    width:90%;
-}
-.userProfile img{
-    border-radius: 50%;
-    width:30px;
-    border:2px solid var(--white);
-    margin-right:10px;
-}
-.userProfile{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-}
-.userProfileInnerWrapper{
-    margin-bottom: 15px;
-}
-.userProfileInnerWrapper p{
-    height:5px;
-}
-.userProfileInnerWrapper p:last-of-type{
-    color:rgba(255, 255, 255, 0.604);
-    font-size: 8px;
-}
-.phoneMessage{
-    font-size: 8px;
-    margin-top:1em;
-    color:var(--desaturatedDarkViolet);
-    width:50%;
-    padding:6px;
-    background-color: var(--paleViolet);
-    border-radius: 15px;
-    border-bottom-left-radius: 5px;
-    line-height: 150%;
-    margin-left:1em;
-}
-.firstPhone{
-    margin-top:10em;
-}
-.phoneImageWrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width:55%;
-    float:right;
-    margin:1em;
-    margin-bottom: 0em;
-    margin-right: 0.5em;
-}
-.phoneImageWrapper img{
-    height:3em;
-    border-radius: 14px;
-
-}
-.phoneUserMessages{
-    float:right;
-    width:50%;
-    margin-right: 0.5em;
+    padding: 0px;
+  }
+  .illustrationMain {
+    width: 180%;
+    margin-left: -125%;
+    border-bottom-right-radius: 270px;
+    top: -10%;
+  }
+  .phoneWrapper {
+    height: 77vh;
+  }
+  .textWrapper {
+    width: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-.phoneMessageUser{
-        font-size: 8px;
-    color:black;
-    padding:6px;
-    margin-top:1em;
-    background-color: var(--white);
-    border-radius: 10px;
-    border-bottom-right-radius: 2px;
-    line-height: 150%;
-    width: fit-content;
-}
-.secondPhone{
-    margin-top:17em;
-}
-.phoneWalkInvite{
-    font-size: 8px;
-    color:white;
-    background-image: var(--linearGradientBgButton);
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 4px 12px;
-    margin-left: 1em;
-    margin-top:1em;
-    border-radius: 12px;
-    border-bottom-left-radius: 5px;
-    width:70%;
-    line-height:170%;
-}
-.phoneWalkInvite button{
-    border-radius: 50%;
-    border:1px solid var(--lightGrayishViolet);
-    width:1em;
-    height:1em;
-    background-color: transparent;
-}
-.phoneWalkInvite p{
-    text-align: left;
-    width:100%;
-    margin-left:5%;
-}
-.price{
-    font-size: 14px;
-    margin-right: 5%;
-    font-weight: var(--boldFontWEight);
-}
-.phoneInput{
-    background-color: var(--white);
-    margin:1em;
-    margin-top:1.8em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:0em 0em 0em 2em;
-    font-size: 9px;
-    border-radius: 20px;
-    color:var(--grayishBlue)
-}
-.phoneInput p{
-    margin:0px;
-    padding: 6px;
-}
-.phoneInput span{
-    border-radius: 50%;
-    color:white;
-    background-color: var(--desaturatedDarkViolet);
-    margin-right:0.2em;
-    height:100%;
+    text-align: center;
+    padding-bottom: 20%;
+  }
+  .textWrapper p:not(.textWrapperTitle) {
+    width: 70%;
+  }
 }
